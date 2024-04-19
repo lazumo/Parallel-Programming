@@ -65,7 +65,8 @@ This project implements the computation of the 3D Mandelbrot set using the Messa
 Here's a formatted version of your README file for the HW3 project:
 
 # HW3: Edge Detection with CUDA on RTX 4090
-![Uploading report.out.png…]()
+![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/1f033770-76dc-4f18-865d-94b47a1403c5)
+
 
 
 This project implements edge detection using CUDA on an NVIDIA RTX 4090 GPU. By leveraging the understanding of GPU architecture, various optimization techniques are employed to achieve high performance in the class.
