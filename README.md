@@ -116,3 +116,46 @@ This project implements edge detection using CUDA on an NVIDIA RTX 4090 GPU. By 
 
 - NVIDIA CUDA Toolkit
 - NVIDIA RTX 4090 GPU (or compatible GPU)
+
+# CUDA Bitcoin Miner
+
+This is a CUDA implementation of a Bitcoin miner that calculates the merkle root from merkle branches and solves a block by finding the appropriate nonce value.
+
+
+## Requirements
+
+- CUDA-capable GPU (Compute Capability 3.0 or higher)
+- CUDA Toolkit (version 10.0 or later)
+- C++ compiler with C++11 support
+
+
+## Implementation Details
+
+The code is divided into several parts:
+
+1. `HashBlock` structure: Represents a block header containing version, previous hash, merkle root, timestamp, difficulty, and nonce.
+2. Merkle root calculation: Calculates the merkle root from the provided merkle branches.
+3. SHA-256 hash calculation: Implements the SHA-256 hash algorithm for both CPU and GPU.
+4. Nonce search kernel: CUDA kernel that searches for the nonce value that satisfies the difficulty target.
+5. Main function: Reads the input file, solves each block, and writes the solution to the output file.
+
+The nonce search is performed on the GPU using CUDA. The kernel is launched with a grid of blocks and threads, where each thread is responsible for validating a certain nonce value. The kernel uses shared memory to cache the found signal and limit global memory accesses.
+
+## Optimizations
+
+- Loop unrolling: The code uses `#pragma unroll` to unroll loops, which reduces branch conditionals and enables coalesced memory access.
+- Constant memory: The `k` array used in the SHA-256 hash calculation is stored in constant memory for efficient access by the GPU.
+- Shared memory: The found signal is cached in shared memory to reduce global memory accesses.
+
+## File Structure
+
+- `cuda_miner.cu`: Main source file containing the CUDA kernel and CPU functions.
+- `sha256.h`: Header file defining the SHA-256 hash algorithm structures and functions.
+
+## Performance
+
+The performance of the CUDA Bitcoin Miner depends on the specifications of the GPU and the difficulty of the blocks being mined. The code has been optimized to achieve high performance by utilizing CUDA features such as loop unrolling, constant memory, and shared memory.
+
+Experiments were conducted with different combinations of blocks and threads per block. Based on the experiments, having 256 threads per block was found to be the optimal configuration.
+
+
