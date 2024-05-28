@@ -122,6 +122,8 @@ This project implements edge detection using CUDA on an NVIDIA RTX 4090 GPU. By 
 - NVIDIA RTX 4090 GPU (or compatible GPU)
 
 # CUDA Bitcoin Miner
+![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/e0e2299d-9ecd-4a57-8aea-76a923895d24)
+
 
 This is a CUDA implementation of a Bitcoin miner that calculates the merkle root from merkle branches and solves a block by finding the appropriate nonce value.
 
