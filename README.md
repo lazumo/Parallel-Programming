@@ -1,11 +1,11 @@
 # HW1: Denoising with OpenMP
-
+![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/8d75bfad-a8b6-4048-bf96-4919ea0c73b9)
 This project demonstrates the implementation of image denoising using OpenMP for parallelization. The main principle of denoising is to average the brightness (明度) of each pixel with its neighbors.
 
 ## File Structure
 
 - `hw1.cpp`: The main source code file implementing the denoising algorithm.
-![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/8d75bfad-a8b6-4048-bf96-4919ea0c73b9)
+
 
 ## Key Modifications
 
