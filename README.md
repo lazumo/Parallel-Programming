@@ -5,6 +5,7 @@ This project demonstrates the implementation of image denoising using OpenMP for
 ## File Structure
 
 - `hw1.cpp`: The main source code file implementing the denoising algorithm.
+![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/8d75bfad-a8b6-4048-bf96-4919ea0c73b9)
 
 ## Key Modifications
 
@@ -38,6 +39,9 @@ This project demonstrates the implementation of image denoising using OpenMP for
 Here's a formatted version of your README file for the HW2 project:
 
 # HW2: 3D Mandelbrot Set Computation with MPI
+
+![image](https://github.com/lazumo/Parallel-Programming/assets/63379847/255f5dfd-6596-4fab-9d03-d42956ea807c)
+
 
 This project implements the computation of the 3D Mandelbrot set using the Message Passing Interface (MPI) for parallel processing. The main challenge in this task is achieving proper load balancing, as the time required to process each pixel varies. To address this, a master-slave model is implemented to facilitate dynamic load distribution among the available processes.
 
